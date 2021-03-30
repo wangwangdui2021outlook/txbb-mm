@@ -18,7 +18,7 @@ export default {
   formLabelWidth: '110px',
   TOKEN_TIME: 60 * 60 * 6,
   // 上传图片常量
-  CDN_UP_URL: process.env.NODE_ENV === 'development' ? 'http://cdn..com' : CDNURL,
+  CDN_UP_URL: process.env.NODE_ENV === 'development' ? 'http://cdn.txbbcrm.com' : CDNURL,
   UPLOAD_IMAGE_SIZE: 300,
   UPLOAD_IMAGE_QUALITY: 0.3,
   // 线上
@@ -118,7 +118,7 @@ export default {
     sid += (id & 0x0000000f) << 4
     sid += (id & 0x000000f0) >> 4
     // sid ^= 11184810
-    sid ^= 2147483648
+    sid ^= 2147483647
     return sid
   },
   // 封装localStorage 带过期时间，单位为秒

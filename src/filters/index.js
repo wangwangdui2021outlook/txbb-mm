@@ -25,7 +25,7 @@ let encodeId = (id) => {
   sid += (id & 0x0000000f) << 4
   sid += (id & 0x000000f0) >> 4
   // sid ^= 11184810
-  sid ^= 2147483648
+  sid ^= 2147483647
   return sid
 }
 
